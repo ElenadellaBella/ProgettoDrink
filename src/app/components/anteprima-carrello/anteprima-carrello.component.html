@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="row">
+    <div class="title col-lg-6 col-md-6 col-sm-12">Carrello</div>
+
+    <div class="subtitle col-lg-6 col-md-6 col-sm-12">
+      Pagamento sicuro con:
+      <img src="../../../assets/icons-payments/CarteCredito.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <!-------------------------------------Colonna1-------------------------------------->
+    <div class="content col-lg-6 col-md-6 col-sm-12">
+        <div class="subtitle1">
+          <img src="../../../assets/cans/canOrange.png" class="immagine img-fluid">
+          <div class="subtitle2">Peach & Mango<br>
+            <div class="info_2">Quantità lattine (al pz): <button class="bottone">+</button> 1 <button class="bottone">-</button> <a href=""> Rimuovi </a>
+              <div class="price">€3.90</div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="subtitle3">Totale carrello
+          <div class="price">€3.90</div>
+        </div>
+        <div class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> Martedì 20 Marzo 2022</p> </div>
+
+        <div class="center">
+          <button class ="bottoneProsegui" (click)="vaiADatiPagamento()">Prosegui l'acquisto</button>
+        </div>
+
+        <a class="center link" (click)="vaiAProdotti()">Torna allo Shopping</a>
+    </div>
+
+
+    <!-------------------------------------Colonna2-------------------------------------->
+    <div class="content col-lg-6 col-md-6 col-sm-12">
+      <img src="../../../assets/icons-carrello/Assistenza.svg" class="icon">
+      <div class="subtitle1">Assistenza</div>
+      <div class="description">Contattaci telefonicamente al numero 800 500 203 dal lunedì al venerdì dalle ore 09:00 - 21:00. </div>
+
+      <div class="row">
+        <div class="content1 col-lg-6 col-md-6 col-sm-12">
+          <img src="../../../assets/icons-carrello/Spedizione.svg" class="icon">
+          <div class="subtitle1">Spedizione rapida </div>
+          <div class="description">Ti offriamo una spedizione sicura per tutti i tuoi ordini. </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="content1 col-lg-6 col-md-6 col-sm-12">
+          <img src="../../../assets/icons-carrello/Reso.svg"class="icon">
+          <div class="subtitle1">Reso sempre gratuito</div>
+          <div class="description">Non sei soddisfatto del tuo utlimo ordine? Il servizio di reso gratuito è a tua disposizione.</div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------Fine Colonna2-------------------------------------->
+
+  </div>
+</div>
+
+
+
+
+
+
+

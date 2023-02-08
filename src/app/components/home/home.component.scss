@@ -1,0 +1,157 @@
+html, body {
+  height:100%;
+}
+
+.video-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed; //video fisso
+    top: 0; //ancorato in alto
+    left: 0; //ancorato a sx
+
+    object-fit: cover; //video centrato e responsive
+    z-index: 0;
+}
+
+.scroll-container, //scroll-container è da togliere
+.scroll-area {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    // border: 2px solid yellow;
+}
+
+
+.scroll-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+
+.scroll-container,
+.scroll-area {
+  margin: 0 auto;
+}
+
+.scroll-area {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// .scroll-area:nth-of-type(1) {
+//   background: none;
+// }
+
+// .scroll-area:nth-of-type(2) {
+//   background: none;
+// }
+
+// .scroll-area:nth-of-type(3) {
+//   background: none;
+// }
+
+// .scroll-area:nth-of-type(4) {
+//   background: none;
+// }
+
+.icon{
+  margin: auto;
+  width: 60px;
+  margin-top: -140px;
+  .scroll-icon{
+    // margin-bottom: 86px;
+    animation: pulse 2s infinite;
+  }
+}
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1600px){ //per schermi da 1600px in giù
+  .scroll-icon{
+    margin-top: 650px;
+  }
+}
+@media screen and (min-width: 1601px){ //per schermi da 1601px in su
+  .scroll-icon{
+    margin-top: 800px;
+  }
+}
+
+.title{
+    font-weight: 700;
+    font-size: 5vw;
+    position: absolute;
+    line-height: 150%;
+    width: 100%;
+    height: 100vh;
+}
+
+.subtitle-yellow{
+  font-weight: 700;
+  color: #DBBA10;
+    font-size: 4vw;
+    position: absolute;
+    margin-top: 9rem;
+    line-height: 150%;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; //allineato al centro verticalmente
+}
+
+// .sezione-img{
+//   position: relative;
+//   width: 100%;
+//   height: auto;
+//   bottom: 0; //ancorato in alto
+//   left: 0; //ancorato a sx
+//   text-align: center;
+//   object-fit: contain;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+
+//   z-index: 2;
+
+//   img {
+//     width: 100%;
+//   }
+// }
+
+.logoDrink{
+  margin-top: -5rem;
+  width: 38rem;
+}
+
+
+
+
+
+

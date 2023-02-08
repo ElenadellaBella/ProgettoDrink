@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+  <div class="scroll-container">
+  <video class="video-bg" src="../../../assets/video-background.mp4" autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" muted loop></video>
+
+  <!------------------------SEZIONE------------------->
+      <div class="scroll-area" data-aos="fade-in" data-aos-duration="3000"><!-- LIBRERIA AOS-->
+        <h1 class="title d-flex justify-content-center align-items-center">{{drink.titleLeft}} <br> {{drink.titleRight}}</h1> <!--UN ENERGY DRINK DIVERSO DAI SOLITI...-->
+
+        <div class="icon">
+          <img class="scroll-icon" src="../../../assets/icons/iconScrollDown.svg" alt="">
+        </div>
+      </div>
+
+  <!------------------------SEZIONE------------------->
+    <div class="scroll-area">
+        <h1 class="title d-flex justify-content-center align-items-center">{{drink.title2}}</h1> <!--PER UNA RICARICA FUORI DAL COMUNE -->
+    </div>
+
+  <!------------------------SEZIONE------------------->
+    <div class="scroll-area">
+          <h4 class="subtitle-yellow">{{drink.title3}}</h4>
+          <img src="../../../assets/logoWhite/logoDrink-02.svg" class="logoDrink" alt="">
+
+    </div>
+  </div>
+<app-footer></app-footer>
+
+
+
+

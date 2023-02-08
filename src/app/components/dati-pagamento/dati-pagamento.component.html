@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="title">Fase d’acquisto</div>
+    <div class="container-big">
+      <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+
+              <div class="row">
+                <div class="col-50">
+                  <h3 class="subtitle">DATI FATTURAZIONE</h3>
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="fname"><i class="fa fa-user"></i> Nome </label>
+                      <input type="text" id="fname" name="firstname" placeholder="Inserisci nome">
+                    </div>
+                    <div class="col-50">
+                      <label for="fsurname"><i class="fa fa-user"></i> Cognome </label>
+                      <input type="text" id="fsurname" name="surname" placeholder="Inserisci cognome">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Indirizzo</label>
+                      <input type="text" id="adr" name="address" placeholder="Inserisci indirizzo">
+                    </div>
+                    <div class="col-50">
+                      <label for="city"><i class="fa fa-institution"></i> Città</label>
+                      <input type="text" id="city" name="city" placeholder="Inserisci città">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Stato</label>
+                      <input type="text" id="state" name="state" placeholder="Italia">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">CAP</label>
+                      <input type="text" id="zip" name="zip" placeholder="70019">
+                    </div>
+                  </div>
+
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="mario@rossi.com">
+
+
+
+                </div>
+
+                <div class="col-50">
+                  <h3 class="subtitle">DATI PAGAMENTO</h3>
+
+                  <label for="cname">Intestatario</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Mario Rossi">
+                  <label for="ccnum">Numero Carta</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Mese di Scadenza</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Settembre">
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Anno di Scadenza</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Indirizzo di spedizione uguale ad indirizzo di fatturazione
+              </label>
+              <div class="center">
+                <button class ="bottoneIndietro" (click)="tornaACarrello()">Indietro</button>
+                <button class ="bottoneAcquista">Acquista</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+

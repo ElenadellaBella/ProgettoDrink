@@ -1,0 +1,21 @@
+.navbar{
+  font-family: 'Inter';
+  font-size: medium;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: #383C3F;
+}
+
+.navbar-brand{
+  width: 100px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.nav-item{
+  display: flex;
+  margin-right: 55px;
+}
+

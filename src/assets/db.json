@@ -1,0 +1,34 @@
+{
+  "allDrinks": [
+    {
+      "id": 1,
+      "flavour": "Peach & Mango",
+      "ingredients": "INGREDIENTI: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).",
+      "price": 3.8
+    },
+    {
+      "id": 2,
+      "flavour": "Dragon Fruit",
+      "ingredients": "INGREDIENTI: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).",
+      "price": 3.5
+    },
+    {
+      "id": 3,
+      "flavour": "Lemon",
+      "ingredients": "INGREDIENTI: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).",
+      "price": 2.5
+    },
+    {
+      "id": 4,
+      "flavour": "Pineapple",
+      "ingredients": "INGREDIENTI: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).",
+      "price": 3.8
+    },
+    {
+      "id": 5,
+      "flavour": "Watermelon",
+      "ingredients": "INGREDIENTI: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).",
+      "price": 3
+    }
+  ]
+}

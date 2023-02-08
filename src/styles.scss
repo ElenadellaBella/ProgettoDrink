@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/theme/variables'; //va sempre messo prima di tutto perchè sovrascrive con i colori che decido io
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+@import "app/theme/components";
+
+body, html {
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+    // font-family: 'Passion One', cursive;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+html, body { height: 100%; }

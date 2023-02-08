@@ -1,0 +1,20 @@
+.foot{
+  position: relative;
+  bottom: 0;
+  z-index: 5;
+}
+footer {
+  z-index: 5;
+  margin-bottom: 0px;
+  bottom: 0;
+
+
+  height: 75px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+
+  .row {
+    margin: 0;
+  }
+}

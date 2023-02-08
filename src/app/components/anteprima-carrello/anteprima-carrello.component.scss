@@ -1,0 +1,151 @@
+*{
+  font-family: Inter, sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+.container{
+  align-items: center;
+  justify-content: center;
+  //border: 2px solid red;
+  margin: 7rem auto;
+  color: black;
+}
+
+.title{
+  color: #383C3F;
+  font-weight: 700;
+  font-size: 3.5rem;
+  padding: 8px;
+}
+
+.subtitle{
+  //border: 2px solid blue;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 0rem;
+  padding: 10px;
+}
+
+.content{
+  //border: 2px solid black;
+  margin-top: 2rem ;
+  padding: 15px;
+  margin-bottom: 50px;
+
+}
+
+.icon{
+  margin-left: 20px;
+}
+
+.subtitle1{
+  display: inline-block;
+  font-weight: 900;
+  margin-left: 0.31rem;
+  font-size: 1.2rem;
+  //border: solid rgb(250, 114, 243);
+
+  img {
+    width: 10%;
+  }
+}
+
+.subtitle2{
+  display: inline-block;
+  //border:  solid darkgoldenrod;
+  width: 90%;
+}
+.subtitle3{
+  display: flex;
+  justify-content: space-between;
+  justify-content: baseline;
+  //border:  solid rgb(188, 173, 136);
+  // width: 100%;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
+.description{
+  font-weight: 500;
+  font-size: 1rem;
+  width: 70%;
+  margin-left: 4.8rem;
+  margin-top: -12px;
+  margin-bottom: 1.30rem;
+  //border: solid greenyellow;
+}
+
+.content1{
+  width: 100%;
+}
+
+.immagine{
+  height: 8%;
+  //border: solid rgb(90, 106, 179);
+}
+
+.info_2{
+  font-weight: 500;
+  font-size: 1rem;
+  //border: solid rgb(250, 245, 114);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+
+}
+
+.price{
+  display: flex;
+  //border: solid greenyellow;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 3px;
+}
+
+
+.bottone{
+  background-color: #383C3F;
+  color: aliceblue;
+  border: none;
+  width: 25px;
+  //border-radius: 12px;
+}
+
+.dataDelivery{
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  //border: solid salmon;
+
+}
+
+.bottoneProsegui{
+  //border: 3px solid #383C3F;
+  width: 150px;
+  height: 40px;
+  padding: 8px;
+  margin-top: 20px;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link{
+  color: #383C3F;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
