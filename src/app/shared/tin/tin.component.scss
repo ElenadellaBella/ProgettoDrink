@@ -39,16 +39,54 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(100% 215.51% at 3.33% 0%, #F07C10 0%, #E2DA1C 100%);
   clip-path: circle(80px at center); //il rettangolo diventa un cerchio centrato
   transition: 0.5s;
 }
 
-.card:hover .circle::before{ //all'hover il cerchio si espande
-  clip-path: circle(400px at center);
+.tin-0::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #F34B16 0%, #EFA46A 100%);
+}
+.tin-1::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #D01171 0%, #F055A1 60.42%, #ED93BC 100%);
+}
+.tin-2::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #53B815 0%, #E2DA1C 78.65%);
+}
+.tin-3::before{
   background: radial-gradient(100% 215.51% at 3.33% 0%, #F07C10 0%, #E2DA1C 100%);
 }
+.tin-4::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #CE0A0B 0%, #DE9A91 100%);
+}
 
+.tin-5::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #380ace 0%, #DE9A91 100%);
+}
+
+
+
+.card:hover .circle::before{ //all'hover il cerchio si espande
+  clip-path: circle(400px at center);
+}
+
+.tin-0::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #F34B16 0%, #EFA46A 100%);
+}
+.tin-1::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #D01171 0%, #F055A1 60.42%, #ED93BC 100%);
+}
+.tin-2::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #53B815 0%, #E2DA1C 78.65%);
+}
+.tin-3::before{
+  background: radial-gradient(100% 215.51% at 3.33% 0%, #F07C10 0%, #E2DA1C 100%);
+}
+.tin-4::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #CE0A0B 0%, #DE9A91 100%);
+}
+.tin-5::before{
+  background: radial-gradient(100% 222.95% at 0% 0%, #380ace 0%, #DE9A91 100%);
+}
 
 .card img{
   position: absolute;

@@ -8,10 +8,11 @@
 
 @import "app/theme/components";
 
-body, html {
+html,body {
     color: white;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    height: 100%;
 
     // font-family: 'Passion One', cursive;
     margin: 0;
@@ -20,5 +21,3 @@ body, html {
 }
 
 
-
-html, body { height: 100%; }

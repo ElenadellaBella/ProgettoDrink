@@ -5,40 +5,16 @@
   [navigation]="true"
   [pagination]="{ clickable: true }"
 >
-  <ng-template swiperSlide><!--Slide 1-->
-    <app-lattina-peach></app-lattina-peach>
+  <ng-template *ngFor="let flavour of flavours" swiperSlide><!--Slide 1-->
+    <app-tin
+      [flavour]="flavour.KeyFlavour"
+      (btnCart)="addToCart($event)">
+    </app-tin>
   </ng-template>
 
-  <ng-template swiperSlide><!--Slide 2-->
-    <app-lattina-dragon></app-lattina-dragon>
-  </ng-template>
 
-  <ng-template swiperSlide><!--Slide 3-->
-    <app-lattina-lemon></app-lattina-lemon>
-  </ng-template>
-
-  <ng-template swiperSlide><!--Slide 4-->
-    <app-lattina-pineapple></app-lattina-pineapple>
-  </ng-template>
-
-  <ng-template swiperSlide><!--Slide 5-->
-    <app-lattina-watermelon></app-lattina-watermelon>
-  </ng-template>
   </swiper>
 </div>
 
-<!-- <div class="container">
-  <div class="row">
-    <div class="card col-lg-3 col-md-4 col-sm-12">
-      <div class="circle"></div>
-      <div class="content">
-        <h2>Peach & Mango</h2>
-        <p>Ingredienti: Acqua, Saccarosio, Pesca (20%), Mango (15%), Glucosio, Anidride Carbonica, Caffeina (0,03%) Vitamine (Niacina, Acido Pantotenico, B6, B12).</p>
-        <h3 class="prezzo">{{3.8 | currency: 'EUR'}}</h3>
-        <app-bottone id="button"></app-bottone>
-      </div>
-      <img src="../../../assets/cans/canOrange.png" class="lattinaimg" alt="">
-    </div>
-  </div>
-</div> -->
+
 
