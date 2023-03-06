@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FlavourTin, Tin } from '../interfaces/tin';
+import { FlavourTin } from '../interfaces/tin';
 
 @Injectable({
   providedIn: 'root'
@@ -87,24 +87,6 @@ export class TinApiService {
       KeyFlavour: FlavourTin.Watermelon,
       info: {
         title:"Watermelon",
-        ingredients: [
-          "Acqua",
-          "Saccarosio",
-          "Watermelon (30%)",
-          "Glucosio",
-          "Anidride Carbonica",
-          "Caffeina (0,03%)",
-          "Vitamine (Niacina, Acido Pantotenico, B6, B12)"
-        ],
-        price: 3.7,
-        image: "../../../assets/cans/canRed.png"
-      }
-    },
-
-    {
-      KeyFlavour: FlavourTin.Explosion,
-      info: {
-        title:"Explosion",
         ingredients: [
           "Acqua",
           "Saccarosio",

@@ -24,6 +24,9 @@ import { AnteprimaCarrelloComponent } from './components/anteprima-carrello/ante
 import { HttpClientModule} from '@angular/common/http';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { TinComponent } from './shared/tin/tin.component';
+import { ItemCartComponent } from './components/item-cart/item-cart.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -45,13 +48,15 @@ import { TinComponent } from './shared/tin/tin.component';
     AnteprimaCarrelloComponent,
     CartItemComponent,
     TinComponent,
+    ItemCartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,21 +12,15 @@
   <div class="row">
     <!-------------------------------------Colonna1-------------------------------------->
     <div class="content col-lg-6 col-md-6 col-sm-12">
-        <div class="subtitle1">
-          <img src="../../../assets/cans/canOrange.png" class="immagine img-fluid">
-          <div class="subtitle2">Peach & Mango<br>
-            <div class="info_2">Quantità lattine (al pz): <button class="bottone">+</button> 1 <button class="bottone">-</button> <a href=""> Rimuovi </a>
-              <div class="price">€3.90</div>
-            </div>
-          </div>
-        </div>
+      <!-- FOR -->
+      <app-item-cart *ngFor="let item of listItemsAdd" [itemCart]="item"></app-item-cart>
 
         <hr>
 
         <div class="subtitle3">Totale carrello
-          <div class="price">€3.90</div>
+          <div class="price">{{totalPrice | currency:'EUR'}}</div>
         </div>
-        <div class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> Martedì 20 Marzo 2022</p> </div>
+        <div *ngIf="listItemsAdd.length>0" class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> {{getDeliveryDate()| date:'dd/MM/YYYY'}}</p> </div>
 
         <div class="center">
           <button class ="bottoneProsegui" (click)="vaiADatiPagamento()">Prosegui l'acquisto</button>

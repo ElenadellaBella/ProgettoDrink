@@ -14,13 +14,11 @@ export class TinService {
   private _flavours:Tin[]=[]
 
 
-
-
   getData(flavour:FlavourTin):Tin|undefined{
     return this._flavours.find(x=>x.KeyFlavour===flavour)
   };
 
-  getFlavours():Tin[]{ //mi ritorna tutta la struttura dati di tutti i gusti
+  getFlavours():Tin[]{ //mi ritorna tutta la struttura dati di tutte le lattine
     return this._flavours;
   }
 

@@ -14,6 +14,5 @@ export enum FlavourTin{
   DragonFruit,
   Lemon,
   Pineapple,
-  Watermelon,
-  Explosion
+  Watermelon
 }

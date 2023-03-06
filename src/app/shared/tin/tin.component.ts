@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { FlavourTin, Tin, TinData } from 'src/app/interfaces/tin';
+import { FlavourTin, Tin } from 'src/app/interfaces/tin';
 import { TinService } from 'src/app/services/tin.service';
 
 @Component({
@@ -11,9 +11,9 @@ import { TinService } from 'src/app/services/tin.service';
 export class TinComponent implements OnInit{
 
   @Input() flavour!:FlavourTin;
-  @Output() btnCart=new EventEmitter<FlavourTin>();
+  @Output() btnCart=new EventEmitter<Tin>();
 
-  flavourData!: TinData;
+  flavourTin!: Tin;
 
   ngOnInit(): void {
     this._getData();
@@ -22,19 +22,19 @@ export class TinComponent implements OnInit{
   constructor(private router:Router, private tin:TinService){}
 
   private _getData(){
-    const resultTin:Tin|undefined=this.tin.getData(this.flavour);
-    if (resultTin) {
-      this.flavourData=resultTin.info
+    const resultTin:Tin|undefined=this.tin.getData(this.flavour); //costante che conterrà grazie al metodo, tutte le lattine
+    if (resultTin) { //se ...?
+      this.flavourTin=resultTin //mettimi il gusto lattina nella costante
     }
   }
 
   addToCart(){
     // this.router.navigate(['carrello']);
-    this.btnCart.emit(this.flavour);
+    this.btnCart.emit(this.flavourTin);
   }
 
   getIngredients(){
-    return this.flavourData.ingredients.join();
+    return this.flavourTin.info.ingredients.join();
   }
 
 }

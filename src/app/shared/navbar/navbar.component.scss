@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 2;
   background: #383C3F;
+  cursor: pointer;
 }
 
 .navbar-brand{
@@ -17,5 +18,15 @@
 .nav-item{
   display: flex;
   margin-right: 55px;
+}
+
+.pill{
+  border-radius: 106px;
+  background-color: red;
+  color: white;
+  font-size: 0.6rem;
+  position: relative;
+  top: -10px;
+  padding: 0.2rem 0.5rem;
 }
 

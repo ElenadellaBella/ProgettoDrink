@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cart } from 'src/app/interfaces/cart';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +10,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor (private router:Router){}
+  constructor (private router:Router, private cartService:CartService){
+    this.cartService.itemObs$.subscribe((listItemAdded: Cart[]) =>
+    {
+      this.itemsAdd=listItemAdded.length;
+    });
+  }
+
+  itemsAdd=0;
 
   ngOnInit(): void {
   }

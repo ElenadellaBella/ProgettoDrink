@@ -16,7 +16,9 @@
           <a class="nav-link" [routerLinkActive]="['active']" routerLink="/prodotti">Prodotti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/carrello">Carrello <img src="../../../assets/icons/Shopping-cart.svg" alt=""> </a>
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/carrello">Carrello <img src="../../../assets/icons/Shopping-cart.svg" alt="">
+            <span *ngIf="itemsAdd > 0" class="pill"> {{itemsAdd}} </span>
+          </a>
         </li>
       </ul>
     </div>
