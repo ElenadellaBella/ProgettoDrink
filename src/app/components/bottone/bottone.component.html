@@ -1,3 +1,18 @@
-<button>
-  <span>Aggiungi <img src="../../../assets/icons/Shopping-cart.svg" id="carrellino"></span>
+<button [disabled]="disabled" [class.disable] = "disabled" [ngStyle]="{
+  'border': buttonConfig.colorStroke ? buttonConfig.colorStroke : 'white' ,
+  'borderStyle': 'solid',
+  'background-color': true ? 'background-color':'grey'
+}">
+
+  <span>
+    <img *ngIf="buttonConfig.icon && buttonConfig.iconPosition === 'left'" [src]="buttonConfig.icon" id="carrellino">
+
+    <span [ngStyle]="{
+      'color': buttonConfig.colorText ? buttonConfig.colorText : 'white'
+    }">{{buttonConfig.label}}
+    </span>
+
+    <img *ngIf="buttonConfig.icon && (!buttonConfig.iconPosition || buttonConfig.iconPosition === 'right')" [src]="buttonConfig.icon" id="carrellino">
+
+  </span>
 </button>

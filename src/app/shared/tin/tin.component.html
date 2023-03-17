@@ -6,7 +6,7 @@
         <h2>{{flavourTin.info.title}}</h2>
         <p>{{getIngredients()}}</p>
         <h3 class="prezzo">{{ flavourTin.info.price| currency: 'EUR'}}</h3>
-        <app-bottone id="button" (click)="addToCart()"></app-bottone>
+        <app-bottone [buttonConfig]="buttonConfig" id="button" (click)="addToCart()"></app-bottone>
       </div>
       <img [src]="flavourTin.info.image" class="lattinaimg" alt="">
     </div>

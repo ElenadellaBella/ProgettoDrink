@@ -12,21 +12,29 @@
   <div class="row">
     <!-------------------------------------Colonna1-------------------------------------->
     <div class="content col-lg-6 col-md-6 col-sm-12">
-      <!-- FOR -->
+
+      <!-- Se il carrello ha lunghezza 0 (è vuoto) -> Mostra il messaggio "carrello vuoto" -->
+      <div *ngIf="listItemsAdd.length===0" class="alert alert-info center">IL TUO CARRELLO È VUOTO.
+        <div class="center link" (click)="tornaAlloShopping()">Torna allo Shopping</div>
+      </div>
+
+      <!-- Se il carrello ha lunghezza >0 (è pieno) -> Mostra gli items -->
+      <div *ngIf="listItemsAdd.length>0">
       <app-item-cart *ngFor="let item of listItemsAdd" [itemCart]="item"></app-item-cart>
 
         <hr>
 
-        <div class="subtitle3">Totale carrello
+        <div class="subtitle3">Totale Carrello
           <div class="price">{{totalPrice | currency:'EUR'}}</div>
         </div>
         <div *ngIf="listItemsAdd.length>0" class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> {{getDeliveryDate()| date:'dd/MM/YYYY'}}</p> </div>
 
-        <div class="center">
-          <button class ="bottoneProsegui" (click)="vaiADatiPagamento()">Prosegui l'acquisto</button>
+        <div class="center btn">
+          <app-bottone [buttonConfig]="buttonConfig" (click)="vaiADatiPagamento()"></app-bottone>
         </div>
 
-        <a class="center link" (click)="vaiAProdotti()">Torna allo Shopping</a>
+        <a class="center link" (click)="tornaAlloShopping()">Torna allo Shopping</a>
+      </div>
     </div>
 
 

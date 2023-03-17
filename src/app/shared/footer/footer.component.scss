@@ -1,8 +1,8 @@
 .foot{
   z-index: 5;
   margin-bottom: 0;
-  bottom: 0;
-  position: fixed; //fixed o relative
+  bottom: -73px;
+  position: relative; //fixed o relative
   width: 100%;
 
   height: 75px;
@@ -13,6 +13,5 @@
   .row {
     margin: 0;
   }
-
 
 }

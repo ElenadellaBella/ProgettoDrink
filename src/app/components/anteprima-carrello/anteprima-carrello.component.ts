@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ButtonConfiguration } from 'src/app/interfaces/button';
 import { Cart } from 'src/app/interfaces/cart';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -13,6 +14,13 @@ export class AnteprimaCarrelloComponent implements OnInit {
   listItemsAdd:Cart[]=[];
   totalPrice:number=0;
 
+
+  buttonConfig:ButtonConfiguration={
+    label:"Prosegui acquisto",
+    colorText: '#383C3F',
+    colorStroke: '#383C3F'
+  }
+
   constructor(private router:Router,private cartService:CartService){
     this.cartService.itemObs$.subscribe((listItemAdded: Cart[]) =>
     {
@@ -20,11 +28,13 @@ export class AnteprimaCarrelloComponent implements OnInit {
       this._setTotalPrice();
     });
   }
+
   ngOnInit(): void {
     this.listItemsAdd=this.cartService.getListItem();
     this._setTotalPrice();
   }
-  vaiAProdotti(){
+
+  tornaAlloShopping(){
     this.router.navigate(['prodotti']);
   }
 

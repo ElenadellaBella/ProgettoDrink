@@ -1,0 +1,15 @@
+mat-dialog-title{
+  padding: 20px;
+}
+
+.info-products, .info-buyer{
+  font-size: small;
+}
+
+button, mat-button, button:hover, .mat-mdc-button{
+  border-radius: 0;
+  border: 3px solid #383C3F;
+  height: 35px;
+  margin-right: 10px;
+}
+

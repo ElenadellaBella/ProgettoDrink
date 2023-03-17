@@ -55,7 +55,7 @@ export class CartService {
     this._subject.next(tinToAdd);
   }
 
-  getListItem(){
+  getListItem():Cart[]{
     return this._listItemAdded;
   }
 

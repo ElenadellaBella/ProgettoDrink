@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ButtonConfiguration } from 'src/app/interfaces/button';
 
 @Component({
   selector: 'app-bottone',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./bottone.component.scss']
 })
 export class BottoneComponent {
+
+  @Input() buttonConfig!: ButtonConfiguration;
+
+  @Input() disabled!:boolean;
 
 }

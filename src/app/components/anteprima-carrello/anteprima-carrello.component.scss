@@ -86,15 +86,7 @@
 
 }
 
-.bottoneProsegui{
-  //border: 3px solid #383C3F;
-  width: 150px;
-  height: 40px;
-  padding: 8px;
-  margin-top: 20px;
-  background-color: white;
-  font-family: 'Inter', sans-serif;
-}
+
 
 .center {
   display: flex;
@@ -102,10 +94,22 @@
   align-items: center;
 }
 
+.btn{
+  border: none;
+  margin-top: -129px;
+  margin-left: 257px;
+  margin-bottom: 20px;
+}
+
 .link{
   color: #383C3F;
-  margin-top: 20px;
+  margin-left: 20px;
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.alert-info{
+  border-radius: 0;
 }
 
 

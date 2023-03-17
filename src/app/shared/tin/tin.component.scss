@@ -6,11 +6,11 @@
   align-items: center;
   justify-content: center;
   min-height: 80vh;
-  // border: 2px solid #006100;
+  //border: 2px solid #006100;
 }
 
-.card{
-  margin: auto; //centrare elelemento in div
+.card{ //creo etichetta rettangolare bianca
+  margin: auto; //centro elelemento in div
   position: relative;
   width: 550px;
   height: 350px;
@@ -19,27 +19,27 @@
   align-items: center; //il contenuto nella card è centrato
   transition: 0.5s;
   border: none;
-  //background: #f7e70b;
+  //background: #ffffff;
 }
 
-.card .circle{ //il cerchio della card
+.card .circle{ //il cerchio all'interno di card
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: hidden; //se il cerchio straborda, non mostrare ciò che fuoriesce
 }
 
-.card .circle::before{ //sovrappongo una etichetta rettangolare
+.card .circle::before{ //cerchio prima sarà centrato nell'etichetta
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  clip-path: circle(80px at center); //il rettangolo diventa un cerchio centrato
+  clip-path: circle(80px at center); //cerchio centrato
   transition: 0.5s;
 }
 
@@ -62,8 +62,8 @@
 
 
 
-.card:hover .circle::before{ //all'hover il cerchio si espande
-  clip-path: circle(400px at center);
+.card:hover .circle::before{ //all'hover sul cerchio, esso si espande
+  clip-path: circle(400px at center); //a partire dal centro, di 400px riempiendo tutta l'etichetta
 }
 
 .tin-0::before{
@@ -83,7 +83,7 @@
 }
 
 
-.card img{
+.card img{ //img all'interno di card
   position: absolute;
   top: 50%;
   left: 50%;
@@ -93,8 +93,8 @@
   transition: 0.5s;
 }
 
-.card:hover img{
-  left: 72%; //all'hover la lattina si sposta
+.card:hover img{ //con hover sulla card
+  left: 72%; //la lattina si allontana da sx
   height: 450px; //e si ingrandisce
 }
 
@@ -105,16 +105,16 @@
   padding: 20px 20px 20px 40px;
   transition: 0.5s;
   opacity: 0;
-  visibility: hidden;
+  visibility: hidden; //testo è nascosto
 }
 
-.card:hover .content{ //animazione testi
+.card:hover .content{ //testo diventa visibile all'hover
   left: 0;
   opacity: 1;
   visibility: visible;
 }
 
-.card .content h2{
+.card .content h2{ //il titoletto del gusto si posiziona correttamente nella card, con stili testo
   color: white;
   font-family: 'Pacifico', cursive;
   font-size: 2em;
@@ -130,10 +130,9 @@
   margin-top: 30px;
   margin-left: -140px;
   font-family: 'Inter', sans-serif;
-
 }
 
-.card .content #button{
+.card .content #button{ //inserisco il bottone
   display: inline;
   position: absolute;
   margin-left: 100px;
@@ -141,7 +140,7 @@
   display: inline-block;
 }
 
-// .lattinaimg{
+// .lattina img{
 //   width: 100px;
 // }
 
@@ -149,17 +148,20 @@
   .card
   {
     width: auto;
-    max-width: 400px;
+    max-width: 320px;
     align-items: flex-start;
     margin: 10px;
   }
   .card:hover{
     height: 600px;
+    // width: 570px;
+    margin-top: 30%;
+    border-radius: 20px;
   }
   .card .content{
     width: 100%;
     left: 0;
-    padding: 50px;
+    padding: 25px;
   }
 
   .card .content h2 {
@@ -171,11 +173,11 @@
 
   .card .content #button {
     margin-left: 240px;
-    margin-top: -200px;
+    margin-top: -225px;
   }
 
   .card:hover img{
-    top:70%;
+    top:68%;
     left: 50%;
     height: 300px;
   }

@@ -4,90 +4,132 @@
       <div class="row">
         <div class="col-75">
           <div class="container">
-            <form action="/action_page.php">
+
+            <form [formGroup]="myForm" (ngSubmit)="acquista()">
 
               <div class="row">
                 <div class="col-50">
                   <h3 class="subtitle">DATI FATTURAZIONE</h3>
 
                   <div class="row">
-                    <div class="col-50">
-                      <label for="fname"><i class="fa fa-user"></i> Nome </label>
-                      <input type="text" id="fname" name="firstname" placeholder="Inserisci nome">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label><i class="fa fa-user"></i> Nome</mat-label>
+                        <input maxlength="20" matInput placeholder="Mario" type="text" formControlName="nome">
+                      </mat-form-field>
                     </div>
-                    <div class="col-50">
-                      <label for="fsurname"><i class="fa fa-user"></i> Cognome </label>
-                      <input type="text" id="fsurname" name="surname" placeholder="Inserisci cognome">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="adr"><i class="fa fa-address-card-o"></i> Indirizzo</label>
-                      <input type="text" id="adr" name="address" placeholder="Inserisci indirizzo">
-                    </div>
-                    <div class="col-50">
-                      <label for="city"><i class="fa fa-institution"></i> Città</label>
-                      <input type="text" id="city" name="city" placeholder="Inserisci città">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label><i class="fa fa-user"></i> Cognome</mat-label>
+                        <input maxlength="20" matInput placeholder="Rossi" type="text" formControlName="cognome">
+                      </mat-form-field>
                     </div>
                   </div>
 
                   <div class="row">
-                    <div class="col-50">
-                      <label for="state">Stato</label>
-                      <input type="text" id="state" name="state" placeholder="Italia">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label><i class="fa fa-address-card-o"></i> Indirizzo</mat-label>
+                        <input matInput placeholder="Indirizzo" type="text" formControlName="indirizzo">
+                      </mat-form-field>
                     </div>
-                    <div class="col-50">
-                      <label for="zip">CAP</label>
-                      <input type="text" id="zip" name="zip" placeholder="70019">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label><i class="fa fa-institution"></i> Città</mat-label>
+                        <input matInput placeholder="Città" type="text" formControlName="città">
+                      </mat-form-field>
                     </div>
                   </div>
 
-                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                  <input type="text" id="email" name="email" placeholder="mario@rossi.com">
+                  <div class="row">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label> Stato</mat-label>
+                        <input matInput placeholder="Stato" type="text" formControlName="stato">
+                      </mat-form-field>
+                    </div>
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label> CAP</mat-label>
+                        <input maxlength="5" matInput placeholder="Cap" type="text" (keydown)="keydown($event)" formControlName="cap">
+                      </mat-form-field>
+                    </div>
+                  </div>
 
-
+                  <div class="row">
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label> Telefono o Cellulare</mat-label>
+                        <input maxlength="10" matInput placeholder="340 2571341" type="text" (keydown)="keydown($event)" formControlName="telefono">
+                      </mat-form-field>
+                    </div>
+                  </div>
 
                 </div>
+
 
                 <div class="col-50">
                   <h3 class="subtitle">DATI PAGAMENTO</h3>
 
-                  <label for="cname">Intestatario</label>
-                  <input type="text" id="cname" name="cardname" placeholder="Mario Rossi">
-                  <label for="ccnum">Numero Carta</label>
-                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                  <label for="expmonth">Mese di Scadenza</label>
-                  <input type="text" id="expmonth" name="expmonth" placeholder="Settembre">
-
                   <div class="row">
-                    <div class="col-50">
-                      <label for="expyear">Anno di Scadenza</label>
-                      <input type="text" id="expyear" name="expyear" placeholder="2018">
-                    </div>
-                    <div class="col-50">
-                      <label for="cvv">CVV</label>
-                      <input type="text" id="cvv" name="cvv" placeholder="352">
-                    </div>
+
+                  <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label> Numero Carta</mat-label>
+                      <input maxlength="16" matInput placeholder="_ _ _ _ - _ _ _ _ - _ _ _ _ - _ _ _ _ " type="text" (keydown)="keydown($event)" formControlName="numCard">
+                    </mat-form-field>
                   </div>
+
+
                 </div>
 
+                  <div class="row">
+                    <div class="form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label> Data di Scadenza</mat-label>
+                        <input matInput placeholder="2023" type="date" formControlName="annoScadenza">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label> CVV</mat-label>
+                        <input maxlength="3" matInput placeholder="_ _ _" type="text" (keydown)="keydown($event)" formControlName="cvv">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-50 form-group">
+                      <mat-form-field appearance="outline">
+                        <mat-label><i class="fa fa-envelope"></i> Email</mat-label>
+                        <input matInput placeholder="mario.rossi@gmail.com" formControlName="email">
+                      </mat-form-field>
+                    </div>
+
+                  </div>
+
+                </div>
               </div>
 
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr"> Indirizzo di spedizione uguale ad indirizzo di fatturazione
-              </label>
-              <div class="center">
-                <button class ="bottoneIndietro" (click)="tornaACarrello()">Indietro</button>
-                <button class ="bottoneAcquista">Acquista</button>
+              <div class="flex-container">
+                <app-bottone [buttonConfig]="buttonConfig" (click)="tornaIndietroAlCarrello()"></app-bottone>
+
+                <app-bottone class="btn-right " [disabled]="!myForm.valid" type="submit"
+                    [buttonConfig]="acquistaButtonConfig">
+                </app-bottone>
               </div>
+              <!-- <button mat-flat-button [disabled]="!myForm.valid" type="submit">Acquista</button> -->
+
+
             </form>
+
           </div>
         </div>
 
       </div>
     </div>
   </div>
+
+
 
 
 

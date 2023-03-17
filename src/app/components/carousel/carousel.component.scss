@@ -1,18 +1,19 @@
 .carosello{
-  margin-top: -100px;
-  //border: solid lightseagreen;
+  width: 60%;
+  margin: 0 auto;
 }
 .swiper-pagination, .swiper-pagination-bullets {
   color: #383C3F;
-  margin-bottom: -750px;
-  padding-bottom: 820px;
-  position: absolute;
 }
 
 .swiper-button-prev, .swiper-button-next{
   color: #383C3F;
-  margin: 0 300px;
-  margin-top: -40px;
 }
+
+.swiper-pagination-bullet-active{
+  background: #383C3F !important;
+}
+
+
 
 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { InvoiceDialogComponent } from './invoice-dialog.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('InvoiceDialogComponent', () => {
+  let component: InvoiceDialogComponent;
+  let fixture: ComponentFixture<InvoiceDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      declarations: [ InvoiceDialogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(InvoiceDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

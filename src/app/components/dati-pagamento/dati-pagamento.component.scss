@@ -11,7 +11,7 @@
   color: #383C3F;
   font-weight: 700;
   font-size: 3.5rem;
-  padding: 8px;
+  margin-left: -10px;
 
 }
 
@@ -36,6 +36,11 @@
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   margin: 0 -30px;
+}
+
+.form-control{
+  height: 50px;
+  margin-bottom: 25px;
 }
 
 .col-25 {
@@ -65,10 +70,8 @@
   border-radius: 3px;
 }
 
-input[type=text] {
+input {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -84,6 +87,35 @@ label {
   font-size: 24px;
 }
 
+mat-form-field{
+  width: 100%;
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-left{
+  border: none;
+  margin-top: -129px;
+  margin-left: 257px;
+  margin-bottom: 20px;
+}
+.btn-right{
+  margin-left: 150px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  margin-top: -190px;
+  margin-left: 340px;
+}
+
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
   .row {
@@ -92,4 +124,5 @@ label {
   .col-25 {
     margin-bottom: 20px;
   }
+
 }

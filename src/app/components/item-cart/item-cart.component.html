@@ -1,7 +1,7 @@
 <div class="subtitle1">
           <img [src]="url" class="immagine img-fluid">
           <div class="subtitle2">{{item.title}}<br>
-            <div class="info_2">Quantità lattine (al pz):
+            <div class="info_2">Quantità lattine (€ al pz):
               <button class="bottone" (click)="setItemToCart(item,true)">+</button>
               {{item.quantity}}
               <button class="bottone" [disabled]="item.quantity<=1" (click)="setItemToCart(item,false)">-</button>

@@ -54,7 +54,7 @@ export class TinApiService {
         ingredients: [
           "Acqua",
           "Saccarosio",
-          "Lemon (30%)",
+          "Limone (30%)",
           "Glucosio",
           "Anidride Carbonica",
           "Caffeina (0,03%)",
@@ -72,7 +72,7 @@ export class TinApiService {
         ingredients: [
           "Acqua",
           "Saccarosio",
-          "Pineapple (30%)",
+          "Ananas (30%)",
           "Glucosio",
           "Anidride Carbonica",
           "Caffeina (0,03%)",
@@ -90,7 +90,7 @@ export class TinApiService {
         ingredients: [
           "Acqua",
           "Saccarosio",
-          "Watermelon (30%)",
+          "Anguria (30%)",
           "Glucosio",
           "Anidride Carbonica",
           "Caffeina (0,03%)",

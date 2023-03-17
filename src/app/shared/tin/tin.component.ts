@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { ButtonConfiguration } from 'src/app/interfaces/button';
 import { FlavourTin, Tin } from 'src/app/interfaces/tin';
 import { TinService } from 'src/app/services/tin.service';
 
@@ -12,6 +13,13 @@ export class TinComponent implements OnInit{
 
   @Input() flavour!:FlavourTin;
   @Output() btnCart=new EventEmitter<Tin>();
+
+  buttonConfig:ButtonConfiguration={
+    label: "Aggiungi",
+    icon: "../../../assets/icons/Shopping-cart.svg",
+    iconPosition: 'right'
+  }
+
 
   flavourTin!: Tin;
 
@@ -29,11 +37,10 @@ export class TinComponent implements OnInit{
   }
 
   addToCart(){
-    // this.router.navigate(['carrello']);
     this.btnCart.emit(this.flavourTin);
   }
 
-  getIngredients(){
+  getIngredients():string{
     return this.flavourTin.info.ingredients.join();
   }
 
