@@ -26,7 +26,7 @@ export class InvoiceDialogComponent implements OnInit{
   products: Cart[] = [];
   constructor(@Inject(MAT_DIALOG_DATA) public data: {form: Invoice, products:Cart[]}, public dialogRef: MatDialogRef<InvoiceDialogComponent>) { }
 
-  totalPrice = 0;
+  totalPrice = 0; // ...
 
   ngOnInit(): void { //calcolo il totale usando operatore rxjs .reduce()
     this.totalPrice = this.data.products.reduce((acc,product)=> acc + product.price, 0);
