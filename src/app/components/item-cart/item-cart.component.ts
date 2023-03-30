@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Cart } from 'src/app/interfaces/cart';
-import { FlavourTin, Tin } from 'src/app/interfaces/tin';
+import { FlavourTin } from 'src/app/interfaces/tin';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({

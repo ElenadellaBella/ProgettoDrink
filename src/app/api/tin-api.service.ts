@@ -11,23 +11,23 @@ export class TinApiService {
   getFlavours(){
     return [
       {
-      KeyFlavour: FlavourTin.Peach,
-      info: {
-        title:"Peach & Mango",
-        ingredients: [
-          "Acqua",
-          "Saccarosio",
-          "Pesca (20%)",
-          "Mango (15%)",
-          "Glucosio",
-          "Anidride Carbonica",
-          "Caffeina (0,03%)",
-          "Vitamine (Niacina, Acido Pantotenico, B6, B12)"
-        ],
-        price: 3.5,
-        image: "../../../assets/cans/canOrange.png"
-      }
-    },
+        KeyFlavour: FlavourTin.Peach,
+        info: {
+          title:"Peach & Mango",
+          ingredients: [
+            "Acqua",
+            "Saccarosio",
+            "Pesca (20%)",
+            "Mango (15%)",
+            "Glucosio",
+            "Anidride Carbonica",
+            "Caffeina (0,03%)",
+            "Vitamine (Niacina, Acido Pantotenico, B6, B12)"
+          ],
+          price: 3.5,
+          image: "../../../assets/cans/canOrange.png"
+        }
+      },
 
     {
       KeyFlavour: FlavourTin.DragonFruit,

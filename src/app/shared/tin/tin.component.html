@@ -3,12 +3,12 @@
     <div class="card col-lg-3 col-md-4 col-sm-12">
       <div class="circle tin-{{flavour}}"></div>
       <div class="content">
-        <h2>{{flavourTin.info.title}}</h2>
+        <h2>{{tin.info.title}}</h2>
         <p>{{getIngredients()}}</p>
-        <h3 class="prezzo">{{ flavourTin.info.price| currency: 'EUR'}}</h3>
+        <h3 class="prezzo">{{ tin.info.price| currency: 'EUR'}}</h3>
         <app-bottone [buttonConfig]="buttonConfig" id="button" (click)="addToCart()"></app-bottone>
       </div>
-      <img [src]="flavourTin.info.image" class="lattinaimg" alt="">
+      <img [src]="tin.info.image" class="lattinaimg" alt="">
     </div>
   </div>
 </div>

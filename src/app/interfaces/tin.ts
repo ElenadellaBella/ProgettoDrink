@@ -2,6 +2,7 @@ export interface Tin {
   KeyFlavour:FlavourTin;
   info: TinData;
 }
+
 export interface TinData{
   title:string;
   ingredients:string[];

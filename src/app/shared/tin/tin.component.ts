@@ -21,27 +21,30 @@ export class TinComponent implements OnInit{
   }
 
 
-  flavourTin!: Tin;
+  tin!: Tin;
 
   ngOnInit(): void {
     this._getData();
   }
 
-  constructor(private router:Router, private tin:TinService){}
+  constructor(private router:Router, private tinService:TinService){}
 
-  private _getData(){
-    const resultTin:Tin|undefined=this.tin.getData(this.flavour); //costante che conterrà grazie al metodo, tutte le lattine
-    if (resultTin) { //se ...?
-      this.flavourTin=resultTin //mettimi il gusto lattina nella costante
+  private _getData(){ //metodo privato perchè lo uso solo in questa classe
+    const resultTin:Tin|undefined=this.tinService.getData(this.flavour); //costante che conterrà grazie al metodo, tutte le lattine
+    if (resultTin) { //se esiste
+      this.tin=resultTin //mettimi il gusto lattina nella costante
     }
   }
 
+  //il metodo "addToCart()" emette un evento "btnCart" quando l'utente fa clic sul pulsante "Aggiungi al carrello"
+  //e passa il valore corrente di "tin" come parametro.
+  //Questo evento verrà poi ascoltato da un componente o servizio che si sottoscrive all'evento "btnCart", che aggiungerà l'elemento al carrello.
   addToCart(){
-    this.btnCart.emit(this.flavourTin);
+    this.btnCart.emit(this.tin);
   }
 
   getIngredients():string{
-    return this.flavourTin.info.ingredients.join();
+    return this.tin.info.ingredients.join();
   }
 
 }

@@ -21,17 +21,22 @@ export class AnteprimaCarrelloComponent implements OnInit {
     colorStroke: '#383C3F'
   }
 
-  constructor(private router:Router,private cartService:CartService){
-    this.cartService.itemObs$.subscribe((listItemAdded: Cart[]) =>
+  //il codice ascolta gli aggiornamenti del carrello attraverso un observable del servizio CartService,
+  //aggiorna la lista degli elementi del carrello e aggiorna il prezzo totale degli articoli ogni volta
+  //che un nuovo elemento viene aggiunto al carrello.
+    constructor(private router:Router,private cartService:CartService){
+    this.cartService.itemObs$.subscribe((listItemAdded: Cart[]) => //Il callback passato a subscribe() viene eseguito ogni volta che viene aggiunto un nuovo elemento all'array listItemAdded del servizio CartService.
     {
-      this.listItemsAdd=listItemAdded;
-      this._setTotalPrice();
+      this.listItemsAdd=listItemAdded; //All'interno del callback, la variabile listItemsAdd della classe viene aggiornata con il valore dell'array listItemAdded del servizio CartService.
+      this._setTotalPrice(); //Infine, viene chiamato il metodo _setTotalPrice() per aggiornare il prezzo totale degli articoli nel carrello.
     });
   }
 
+  // ottengo la lista degli elementi del carrello dal servizio CartService e
+  // aggiornare il prezzo totale degli articoli.
   ngOnInit(): void {
-    this.listItemsAdd=this.cartService.getListItem();
-    this._setTotalPrice();
+    this.listItemsAdd=this.cartService.getListItem(); //richiamato il metodo getListItem() del servizio CartService per ottenere la lista degli elementi del carrello
+    this._setTotalPrice(); //calcolare e aggiornare il prezzo totale degli articoli nel carrello.
   }
 
   tornaAlloShopping(){
@@ -42,10 +47,10 @@ export class AnteprimaCarrelloComponent implements OnInit {
     this.router.navigate(['dati-pagamento']);
   }
 
-  private _setTotalPrice(){
+  private _setTotalPrice(){ //calcolo e aggiorno il prezzo totale degli articoli nel carrello.
     this.totalPrice=0;
-    this.listItemsAdd.forEach((element:Cart) => {
-      this.totalPrice=this.totalPrice+element.price;
+    this.listItemsAdd.forEach((element:Cart) => { //vado ad iterare per ogni elemento della lista degli elementi del carrello listItemsAdd utilizzando il metodo forEach().
+      this.totalPrice=this.totalPrice+element.price; // totalPrice conterrà la somma totale dei prezzi di tutti gli elementi del carrello.
     });
   }
 

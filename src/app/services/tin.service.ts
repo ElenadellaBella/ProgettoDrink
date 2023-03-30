@@ -11,14 +11,17 @@ export class TinService {
     this._flavours=this.tinApi.getFlavours()
    }
 
+  //inizializzo un array vuoto che conterrà tutte le mie lattine
   private _flavours:Tin[]=[]
 
 
-  getData(flavour:FlavourTin):Tin|undefined{
+  //Metodo che in base al gusto specificato nel param. cerca nell'array _flavours il gusto che ho immesso come param.
+  getData(flavour:FlavourTin):Tin|undefined{ //Se c'è mi restituisce la Tin corrispondente, altrim undefined
     return this._flavours.find(x=>x.KeyFlavour===flavour)
   };
 
-  getFlavours():Tin[]{ //mi ritorna tutta la struttura dati di tutte le lattine
+  //metodo che mi restituisce in un array, tutte le lattine
+  getFlavours():Tin[]{
     return this._flavours;
   }
 

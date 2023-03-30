@@ -27,7 +27,7 @@
         <div class="subtitle3">Totale Carrello
           <div class="price">{{totalPrice | currency:'EUR'}}</div>
         </div>
-        <div *ngIf="listItemsAdd.length>0" class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> {{getDeliveryDate()| date:'dd/MM/YYYY'}}</p> </div>
+        <div *ngIf="listItemsAdd.length>0" class="dataDelivery">Consegna stimata: <p [ngStyle]="{color:'limegreen'}"> {{ getDeliveryDate()| date:'dd/MM/YYYY' }}</p> </div>
 
         <div class="center btn">
           <app-bottone [buttonConfig]="buttonConfig" (click)="vaiADatiPagamento()"></app-bottone>
@@ -48,7 +48,7 @@
         <div class="content1 col-lg-6 col-md-6 col-sm-12">
           <img src="../../../assets/icons-carrello/Spedizione.svg" class="icon">
           <div class="subtitle1">Spedizione rapida </div>
-          <div class="description">Ti offriamo una spedizione sicura per tutti i tuoi ordini. </div>
+          <div class="description">Ti offriamo una spedizione rapida e sicura per tutti i tuoi ordini. </div>
         </div>
       </div>
 
@@ -56,7 +56,7 @@
         <div class="content1 col-lg-6 col-md-6 col-sm-12">
           <img src="../../../assets/icons-carrello/Reso.svg"class="icon">
           <div class="subtitle1">Reso sempre gratuito</div>
-          <div class="description">Non sei soddisfatto del tuo utlimo ordine? Il servizio di reso gratuito è a tua disposizione.</div>
+          <div class="description">Non sei soddisfatto del tuo utlimo ordine? <br> Il servizio di reso gratuito è a tua disposizione.</div>
         </div>
       </div>
     </div>

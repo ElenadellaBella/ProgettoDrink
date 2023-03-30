@@ -63,8 +63,8 @@ export class DatiPagamentoComponent implements OnInit {
     this.router.navigate(['carrello']);
   }
 
-  acquista(){
-    if (this.cartService.getListItem().length>0) { //se almeno un prod (che è ricavato dal metodo del Service) è stato aggiunto al cart, allora apri dialog
+  acquista(){ // se l'utente ha aggiunto almeno un prodotto al carrello, consenti l'acquisto.
+    if (this.cartService.getListItem().length>0) { //controllo se ci sono item nel carrello del servizio cartService chiamando il suo metodo getListItem()
      this.openDialog()
     }
   }

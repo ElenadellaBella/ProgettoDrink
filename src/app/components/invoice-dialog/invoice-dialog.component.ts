@@ -12,7 +12,7 @@ import { Invoice } from 'src/app/interfaces/invoice';
 export class InvoiceDialogComponent implements OnInit{
 
   buttonConfig:ButtonConfiguration={
-    label:"Chiudi",
+    label:"Indietro",
     colorText: '#383C3F',
     colorStroke: '#383C3F'
   }
@@ -31,10 +31,18 @@ export class InvoiceDialogComponent implements OnInit{
   ngOnInit(): void { //calcolo il totale usando operatore rxjs .reduce()
     this.totalPrice = this.data.products.reduce((acc,product)=> acc + product.price, 0);
   }
+  //La funzione reduce() viene utilizzata per iterare attraverso ogni elemento dell'array data.products
+  //e accumulare il prezzo di ogni prodotto in una variabile chiamata acc. Alla fine dell'iterazione,
+  //il valore finale di acc è il prezzo totale di tutti i prodotti.
+
+  //In pratica, reduce() somma il prezzo di ogni prodotto all'accumulatore acc,
+  //partendo da un valore iniziale di 0, e restituisce il valore finale dell'accumulatore.
+  //Il valore finale dell'accumulatore viene quindi assegnato alla proprietà totalPrice conterrà il prezzo totale di tutti i prodotti presenti nell'array.
 
   purchaseConfirmation():void{
     alert(`ACQUISTO CONFERMATO! | Grazie per averci scelto. `);
     this.dialogRef.close('close');
+    this.data.products=[];
   }
 
 }
