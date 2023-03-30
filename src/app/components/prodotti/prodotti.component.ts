@@ -19,8 +19,7 @@ export class ProdottiComponent implements OnInit{
       'url(../../../assets/sfondiColorati/sfondo2.svg)', //[1]
       'url(../../../assets/sfondiColorati/sfondo3.svg)', //[2]
       'url(../../../assets/sfondiColorati/sfondo4.svg)', //[3]
-      'url(../../../assets/sfondiColorati/sfondo5.svg)', //[4]
-      ''
+      'url(../../../assets/sfondiColorati/sfondo5.svg)'  //[4]
     ];
 
     const changeBg = () => {
@@ -36,7 +35,7 @@ export class ProdottiComponent implements OnInit{
       }
     }
     changeBg();
-    setInterval(changeBg, 1000);
+    setInterval(changeBg, 1500);
   }
 }
 
